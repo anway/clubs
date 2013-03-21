@@ -1,5 +1,5 @@
-<div class = "span12 container" id="clubs_wrapper">
 
+<div class = "span12 container" id="clubs_wrapper">
 <?php
 	$result = mysql_query("SELECT club_id, name, blurb, size, involvement, email, site, 
 	                            address, election_month, update_date, pic FROM club_master") 
@@ -12,11 +12,11 @@
 	  // Create Tag String
 	  $tag_string = "";
 	  foreach($tags as $k => $tag) {
-	    $tag_string = $tag_string . ", " . $tag; 
+	    $tag_string = $tag_string . " " . $tag; 
 	  }
 	  */
 	  // This is for the clubs list
-	  echo '<div class="item"> <a href=#'.$row["club_id"].' data-toggle="modal">'
+	  echo '<div class="item '.$tag_string.'"> <a href=#'.$row["club_id"].' data-toggle="modal">'
 	    .$row["name"].'</a> </div>';
 	  
 	  // This if for the modal view.
@@ -38,3 +38,23 @@
 	}
     ?>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	var $container = $('#clubs_wrapper'),
+	    $checkboxes = $('#filters input');
+
+	$container.isotope({
+		itemSelector: '.item'
+	});
+
+	$checkboxes.change(function(){
+		var filters = [];
+		$checkboxes.filter(':checked').each(function(){
+			filters.push(this.value);
+		});
+		filters = filters.join(', ');
+		$container.isotope({ filter: filters});
+	});
+	});
+</script>

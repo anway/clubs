@@ -6,6 +6,7 @@
             <div style="text-align: center">
               <h4>John Harvard<h4>
             </div>
+<div id="filters">
             <label class="checkbox">
               <input type="checkbox" value="">
               Joined Clubs
@@ -24,39 +25,39 @@
             </label>
             <hr>
             <label class="checkbox">
-              <input type="checkbox" value="1">
+              <input type="checkbox" value=".1" id="1">
               Academic/Pre-Professional
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="2">
+              <input type="checkbox" value=".2" id="2">
               Arts
             </label>
             <label class="checkbox">
-              <input type="checkbox" value="15">
+              <input type="checkbox" value=".15" id="15">
               Athletics
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value="13">
+              <input type="checkbox" value=".13" id="13">
               Campus Life
             </label>
             <label class="checkbox">              
-              <input type="checkbox" value="3">
+              <input type="checkbox" value=".3" id="3">
               Cultural/Racial
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value="4">
+              <input type="checkbox" value=".4" id="4">
               Gender/Sexuality
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value="5">
+              <input type="checkbox" value=".5" id="5">
               Government/Politics
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value="666666">
+              <input type="checkbox" value=".6" id="6">
               Health/Wellness
             </label>
             <label class="checkbox">              
@@ -84,6 +85,7 @@
               <input type="checkbox" value="">
               Women's Initiative
             </label>
+</div>
           </div>
         </div> <!-- span3 -->
         <div class="span9">
