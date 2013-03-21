@@ -1,0 +1,81 @@
+/* Club name boxes */
+.item {
+  width: 130px;
+  height: 100px;
+  margin: 5px;
+  background-color: #dceadb; 
+}
+
+/* Content wrappers */
+.body {
+  position: fixed;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.fixed-header {
+  position:fixed;
+  text-align:center;
+  background-color:white;
+  margin-top:0px;
+  padding-top:5px;
+  height:140px;
+}
+
+.masthead {
+  height: 80px;
+  max-width: 1000px;
+}
+  
+.container {
+  margin 0 auto;
+  max-width: 1000px;
+}
+
+.banner {
+  width: 100%;
+  min-height: 300px;
+  margin 0;
+  background-color:yellow;
+}
+
+/* Navbars */
+.navbar {
+  margin-top: 20px;
+}
+
+/* Customize the mainpage  links to be fill the entire space of the .navbar */
+.navbar-main .navbar-inner-main {
+  padding: 0;
+}
+.navbar-main .nav-main {
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+.navbar-main .nav-main li {
+  display: table-cell;
+  width: 1%;
+  float: none;
+}
+.navbar-main .nav-main li a {
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar-main .nav-main li:first-child a {
+  border-left: 0;
+  border-radius: 3px 0 0 3px;
+}
+      
+.navbar-main .nav-main li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+#container {
+  height: 80%;
+}
