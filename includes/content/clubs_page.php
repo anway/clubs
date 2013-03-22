@@ -20,72 +20,71 @@
               Friend's Clubs
             </label>
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value="*">
               All 
             </label>
             <hr>
             <label class="checkbox">
-              <input type="checkbox" value=".1" id="1">
+              <input type="checkbox" value=".1">
               Academic/Pre-Professional
             </label>
             <label class="checkbox">
-              <input type="checkbox" value=".2" id="2">
+              <input type="checkbox" value=".2">
               Arts
             </label>
             <label class="checkbox">
-              <input type="checkbox" value=".15" id="15">
+              <input type="checkbox" value=".15">
               Athletics
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value=".13" id="13">
+              <input type="checkbox" value=".13">
               Campus Life
             </label>
             <label class="checkbox">              
-              <input type="checkbox" value=".3" id="3">
+              <input type="checkbox" value=".3">
               Cultural/Racial
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value=".4" id="4">
+              <input type="checkbox" value=".4">
               Gender/Sexuality
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value=".5" id="5">
+              <input type="checkbox" value=".5">
               Government/Politics
             </label>
 
             <label class="checkbox">
-              <input type="checkbox" value=".6" id="6">
+              <input type="checkbox" value=".6">
               Health/Wellness
             </label>
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".7">
               Media/Publications 
             </label>            
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".8">
               Public Service
             </label>             
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".9">
               Recreation 
             </label>             
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".10">
               Religious
             </label>
             <label class="checkbox">              
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".11">
               Social
             </label>
                           
             <label class="checkbox">
-              <input type="checkbox" value="">
+              <input type="checkbox" value=".12">
               Women's Initiative
             </label>
-</div>
           </div>
         </div> <!-- span3 -->
         <div class="span9">
@@ -104,36 +103,9 @@
             </form>
             <hr>
             <?php
-              include 'includes/content/clubs_container.php';
+              include 'includes/content/clubs_container_yuqi.php';
             ?>
         </div> <!-- span9 -->
       </div> <!-- span12 -->
     </div>
 
-<script>
-/*handles filters. this script is called whenever any checkbox is checked or unchecked*/
-$(document).ready(function(){
-    $(":checkbox").change(function(){
-    var rows=<?=json_encode($rows)?>;
-		/*first assume that all of the events are excluded, then start adding in*/
-    $('.cell').hide();
-		/*iterate through checkboxes to add in events*/
-    $(":checkbox").each(function(){
-        if ($(this).attr("checked"))
-        {
-            var num=$(this).attr('id'); /*the variable num holds the name of the filter, like 'filter1' or 'filter2', which also happens to be the name of the filter in the database*/
-            var end=rows.length;
-            for (var i=0; i<end; i++)
-            {
-                if (rows[i]!=null)
-                    if (rows[i][num]==1)/*ie if $rows[$i]['filter1']==1 for all the filters*/
-                    {
-                        $('#'+i).show();
-                    }
-             }
-         }
-        });
-        resizecells();
-    });
-});
-</script>

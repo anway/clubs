@@ -1,20 +1,21 @@
-
 <div class = "span12 container" id="clubs_wrapper">
 <?php
 	$result = mysql_query("SELECT club_id, name, blurb, size, involvement, email, site, 
 	                            address, election_month, update_date, pic FROM club_master") 
 	or die(mysql_error());
 	while ($row = mysql_fetch_array($result)) { 
-	  /*
-	  // Grab Tags
-	    $tags = mysql_query("SELECT club_tag FROM club_tags WHERE club_id ='".$row["club_id"]."'")
-	    or die(mysql_error());
-	  // Create Tag String
-	  $tag_string = "";
-	  foreach($tags as $k => $tag) {
-	    $tag_string = $tag_string . " " . $tag; 
-	  }
-	  */
+	  $cid = $row["club_id"];
+
+        // Grab Tags
+          $query = "SELECT club_tag FROM club_tags WHERE club_id=$cid";
+          $tags = mysql_query($query) or die(mysql_error());
+          // Create Tag String
+
+          $tag_string = "";
+          while($tag=mysql_fetch_array($tags)) {
+            $tag_string = $tag_string . " " . $tag["club_tag"];
+          }
+
 	  // This is for the clubs list
 	  echo '<div class="item '.$tag_string.'"> <a href=#'.$row["club_id"].' data-toggle="modal">'
 	    .$row["name"].'</a> </div>';
