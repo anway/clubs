@@ -6,6 +6,7 @@
     </div> <!-- container -->    
     <!-- global javascript -->
     <script src="js/scripts.js"></script>
+    <script src="js/isotope.min.js"></script>
 
     <!-- jquery and bootstrap javascript-->
     <script src="http://code.jquery.com/jquery.js"></script>

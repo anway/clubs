@@ -1,8 +1,8 @@
-// isotope formatting
+/*// isotope formatting
 $('#container').isotope({
   itemSelector: '.item',
 });
-
+*/
 // Additional JS functions here
 /*function login() {
         
